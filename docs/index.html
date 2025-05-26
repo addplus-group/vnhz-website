@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mr. E.M.J. van Nieuwenhuizen | Advocaat Amsterdam</title>
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="canonical" href="https://vnhz.nl/"/>
+	<link rel="canonical" href="https://vnhz.nl/">
 	<link rel="icon" href="favicon.ico" sizes="any">
 	<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAHJJREFUWEdjZBhgwDjA9jPgdMCG4Mj91HRcwNrljtjMG7wOoKbv8Zk1eNIALM5hcbUhOOo/NUMhYO0ysGfR7YGHwKgDRkNgNARGQ2A0BEZDYDQERkNgNAQGPASo2f4jxazB0ypGd/Voz4iUeKRE7YCnAQAVvgAwemfQogAAAABJRU5ErkJggg==">
 	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbD0iI2IwNTM1YSIgZD0iTTYgNmgyMHYyMEg2eiIvPjxwYXRoIHN0cm9rZT0iI2IwNTM1YSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0zIDZ2MjBNMjkgNnYyME02IDNoMjBNNiAyOWgyMCIvPjwvc3ZnPg==">
@@ -34,7 +34,123 @@
 			}
 		};
 	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LegalService",
+			"name": "Mr. E.M.J. van Nieuwenhuizen",
+			"alternateName": "Van Nieuwenhuizen Advocatuur",
+			"description": "Ervaren advocaat sinds 1980, gespecialiseerd in personen- en familierecht, jeugdrecht en strafrecht in Amsterdam.",
+			"url": "https://vnhz.nl/",
+			"logo": "https://vnhz.nl/images/logo.svg",
+			"image": "https://vnhz.nl/images/logo.svg",
+			"telephone": "+31647694965",
+			"email": "advo@vnhz.nl",
+			"foundingDate": "1980",
+			"knowsLanguage": ["nl", "Dutch"],
+			"areaServed": {
+				"@type": "City",
+				"name": "Amsterdam",
+				"addressCountry": "NL"
+			},
+			"serviceType": [
+				"Personen- en familierecht",
+				"Jeugdrecht",
+				"Strafrecht",
+				"Echtscheiding",
+				"Alimentatie",
+				"Gezag en omgang"
+			],
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Linnaeusparkweg 16",
+				"addressLocality": "Amsterdam",
+				"postalCode": "1098 EB",
+				"addressCountry": "NL",
+				"addressRegion": "Noord-Holland"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "52.355594",
+				"longitude": "4.931389"
+			},
+			"openingHoursSpecification": {
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": [
+					"Monday",
+					"Tuesday",
+					"Wednesday",
+					"Thursday",
+					"Friday"
+				],
+				"opens": "09:00",
+				"closes": "17:00"
+			},
+			"priceRange": "€€",
+			"paymentAccepted": ["Bank Transfer"],
+			"currenciesAccepted": "EUR",
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Juridische Diensten",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Echtscheiding",
+							"description": "Juridische begeleiding bij echtscheidingsprocedures"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Alimentatie",
+							"description": "Advies en begeleiding bij alimentatiekwesties"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "Strafrecht",
+							"description": "Verdediging in strafzaken en jeugdstrafrecht"
+						}
+					}
+				]
+			},
+			"employee": {
+				"@type": "Person",
+				"name": "E.M.J. van Nieuwenhuizen",
+				"jobTitle": "Advocaat",
+				"hasOccupation": {
+					"@type": "Occupation",
+					"name": "Advocaat",
+					"occupationLocation": {
+						"@type": "City",
+						"name": "Amsterdam"
+					}
+				}
+			},
+			"identifier": [
+				{
+					"@type": "PropertyValue",
+					"name": "KvK nummer",
+					"value": "34367512"
+				}
+			],
+			"sameAs": [
+				"https://www.advocatenorde.nl/"
+			]
+		}
+	</script>
 	<style type="text/tailwindcss">
+		@layer base {
+			p {
+				text-align: justify;
+			}
+		}
+
 		.card {
 			background: white;
 			border: 1px solid oklch(96.7% 0.001 286.375); /* zink-200 */
@@ -42,8 +158,8 @@
 		}
 
 		.check-icon::before {
-			content: '✓';
-			color: oklch(45.9% 0.187 3.815); /* pink-800 */
+			content: '•';
+			color: #b0535a;
 			margin-right: 10px;
 			font-weight: bold;
 		}
@@ -57,7 +173,7 @@
 		}
 
 		.primary-link {
-			@apply text-primary hover:text-violet-900 transition-colors;
+			@apply text-[#b0535a] underline decoration-transparent hover:text-primary hover:decoration-current transition-all duration-500;
 		}
 
 		.section-title {
@@ -76,50 +192,43 @@
 	<main class="flex-grow">
 		<section class="py-6 md:py-12">
 			<div class="content-container">
-				<div class="flex flex-col md:flex-row items-start">
-					<div class="md:w-2/3 md:pr-8">
-						<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
-							Mr. E.M.J. van Nieuwenhuizen
-						</h1>
-						<p class="section-title">
-							Een ervaren advocaat met een persoonlijke en deskundige aanpak.
-						</p>
-						<div class="mt-6 text-base sm:text-lg space-y-4">
-							<p>
-								U kunt bij ons terecht voor juridische bijstand op maat in personen- en familierecht, jeugdrecht en strafrecht.<br>
-								Ik sta klaar om u te helpen uw juridische vraagstukken helder in kaart te brengen en samen met u naar de beste oplossing te zoeken.<br>
-								Neem gerust contact op voor een eerste, vrijblijvend kennismakingsgesprek om uw situatie te bespreken.
-							</p>
-						</div>
-						<a href="#contact" class="inline-block mt-6 sm:mt-8 px-5 sm:px-6 py-3 sm:py-4 bg-primary text-white font-semibold rounded-xl hover:bg-violet-900 transition text-sm sm:text-base">Neem contact op</a>
-					</div>
-					<div class="md:w-1/3 mt-8 md:mt-0 flex justify-center">
-						<div class="w-64 h-72 sm:h-80 bg-white border border-primary border-opacity-10 flex items-center justify-center">
-							<span class="text-light text-sm italic">Foto komt hier</span>
-						</div>
-					</div>
+				<h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
+					Mr. E.M.J. van Nieuwenhuizen
+				</h1>
+				<p class="section-title">
+					Ervaren advocaat sinds 1980, gespecialiseerd in personen- en familierecht, jeugdrecht en strafrecht
+				</p>
+				<div class="mt-6 text-base sm:text-lg space-y-4">
+					<p>
+						Met meer dan veertig jaar ervaring als advocaat bied ik persoonlijke en deskundige juridische ondersteuning. Mijn praktijk richt zich op personen- en familierecht, jeugdrecht en strafrecht, waarbij ik samen met u werk aan heldere oplossingen voor uw juridische vraagstukken.
+					</p>
+					<p>
+						Voor een vrijblijvend kennismakingsgesprek kunt u contact opnemen.
+					</p>
+				</div>
+				<div class="text-right">
+					<a href="#contact" class="inline-block mt-6 sm:mt-8 px-5 sm:px-6 py-3 sm:py-4 bg-[#b0535a] text-white font-semibold rounded-xl hover:bg-primary transition text-sm sm:text-base" aria-label="Ga naar contactsectie">Neem contact op</a>
 				</div>
 			</div>
+			<div class="md:w-1/3 mt-8 md:mt-0 flex justify-center"></div>
 		</section>
 		<section class="py-10 md:py-16 bg-white">
 			<div class="content-container">
 				<p class="text-2xl text-secondary">
-					Mr. E.M.J. van Nieuwenhuizen, beëdigd als advocaat in 1980, is een ervaren juridisch professional met een specialisatie in personen- en familierecht, jeugdrecht en strafrecht.
+					Over mijn praktijk
 				</p>
 				<p class="mt-6 text-base sm:text-lg">
-					Zij biedt deskundige juridische bijstand bij onder meer echtscheidingen, gezags- en omgangskwesties, alimentatievraagstukken en de verdeling van vermogen. Daarnaast heeft zij uitgebreide expertise in strafrechtelijke procedures, variërend van zaken bij de Kantonrechter en Politierechter tot complexe zaken bij de Rechtbank. Ook de belangen van jeugdigen in strafzaken worden door haar behartigd.
+					Sinds mijn beëdiging als advocaat in 1980 heb ik mij gespecialiseerd in juridische vraagstukken die mensen raken in hun persoonlijke leven. Mijn ervaring omvat echtscheidingen, gezags- en omgangskwesties, alimentatievraagstukken en vermogensverdeling. In strafzaken behartig ik belangen voor zowel de Kantonrechter en Politierechter als bij complexere procedures voor de Rechtbank, inclusief jeugdstrafzaken.
 				</p>
 				<p class="mt-6 text-base sm:text-lg">
-					Haar ervaring strekt zich verder uit tot het penitentiair recht, voortkomend uit haar lidmaatschap van een Commissie van Toezicht van een PI in Amsterdam (2000-2013).<br>
-					Tevens heeft mr. Van Nieuwenhuizen zitting gehad in de Raad van Discipline in het ressort Amsterdam (8&nbsp;jaar) en is zij van juli&nbsp;2021 tot en met juli&nbsp;2024 advocaat-lid van het Hof van Discipline geweest.<br>
-					Deze ervaringen onderstrepen haar diepgaande kennis van het recht en haar betrokkenheid bij de juridische professie.
+					Mijn kennis van het penitentiair recht is verdiept door mijn lidmaatschap van een Commissie van Toezicht van een Penitentiaire Inrichting in Amsterdam van 2000 tot 2013.
 				</p>
 			</div>
 		</section>
 		<section class="py-10 md:py-16">
 			<div class="content-container">
-				<p class="text-2xl text-secondary mb-10">
-					Mr. E.M.J. van Nieuwenhuizen is in het rechtsgebiedenregister van de Nederlandse orde van advocaten geregistreerd met de volgende hoofd- en sub rechtsgebieden:
+				<p class="my-6 text-base sm:text-lg">
+					Ik sta geregistreerd in het rechtsgebiedenregister van de Nederlandse Orde van Advocaten voor de volgende hoofdgebieden:
 				</p>
 				<div class="grid md:grid-cols-2 gap-6 md:gap-8">
 					<div class="card p-4 sm:p-6">
@@ -143,15 +252,18 @@
 					</div>
 				</div>
 				<p class="mt-8 sm:mt-10 text-base sm:text-lg">
-					Om haar expertise te waarborgen, voldoet mr. Van Nieuwenhuizen aan de permanente opleidingsvereisten van de Nederlandse orde van advocaten en behaalt zij jaarlijks de vereiste opleidingspunten voor elk geregistreerd hoofdrechtsgebied.
+					Om mijn vakkennis actueel te houden, voldoe ik aan alle permanente opleidingsvereisten van de Nederlandse Orde van Advocaten en behaal jaarlijks de vereiste opleidingspunten voor elk geregistreerd rechtsgebied.
 				</p>
 			</div>
 		</section>
 		<section id="contact" class="py-16 bg-white">
 			<div class="content-container">
+				<h3 class="text-xl font-semibold text-primary">Contact</h3>
+				<p class="my-6 text-base sm:text-lg">
+					Neem gerust contact op voor een kennismakingsgesprek om uw situatie te bespreken.
+				</p>
 				<div class="grid md:grid-cols-2 gap-6 md:gap-8">
 					<div class="space-y-4">
-						<h3 class="text-lg font-semibold text-primary">Contact</h3>
 						<div class="flex items-start">
 							<span class="contact-label pt-1">Adres</span>
 							<p>
@@ -178,7 +290,7 @@
 					</div>
 					<div>
 						<div class="w-full h-80 overflow-hidden card">
-							<iframe src="https://maps.google.com/maps?q=Linnaeusparkweg+16,+Amsterdam&z=15&output=embed" class="w-full h-full border=0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+							<iframe src="https://maps.google.com/maps?q=Linnaeusparkweg+16,+Amsterdam&z=12&output=embed" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
